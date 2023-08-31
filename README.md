@@ -1,2 +1,2 @@
 # Web-Scraping-Google_Maps
-Taking deals from a city and putting them into an excel spreadsheet
+Taking establishments from a city and putting them in an excel spreadsheet
