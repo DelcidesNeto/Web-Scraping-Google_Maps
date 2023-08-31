@@ -39,7 +39,7 @@ with sync_playwright() as pw:
     google_maps = navegador.new_page()
     google_maps.set_default_timeout(120000)
     print(f'Pesquisando por "{lugar.capitalize()} em {cidade.capitalize()}"')
-    google_maps.goto(f'https://www.google.com/search?sca_esv=561186545&tbs=lf:1,lf_ui:9&tbm=lcl&sxsrf=AB5stBgXov6N2_ETmGY_66proRDcusH0kg:1693360006806&q={lugar}+em+{cidade}+%2B+telefone&rflfq=1&num=10&sa=X&ved=2ahUKEwiUxLrNoYOBAxXrtpUCHffUDvsQjGp6BAgWEAE#rlfi=hd:;si:;mv:[[-15.5497494,-49.9308049],[-15.570485000000001,-49.9609993]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u5!2m2!5m1!1sgcid_3bars_1and_1pubs!1m4!1u5!2m2!5m1!1sgcid_3pizza_1restaurant!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e5!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAEqAkJS,lf:1,lf_ui:9')
+    google_maps.goto(f'https://www.google.com/search?sca_esv=561186545&tbs=lf:1,lf_ui:9&tbm=lcl&sxsrf=AB5stBgXov6N2_ETmGY_66proRDcusH0kg:1693360006806&q={lugar}+in+{cidade}+%2B+telefone&rflfq=1&num=10&sa=X&ved=2ahUKEwiUxLrNoYOBAxXrtpUCHffUDvsQjGp6BAgWEAE#rlfi=hd:;si:;mv:[[-15.5497494,-49.9308049],[-15.570485000000001,-49.9609993]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u5!2m2!5m1!1sgcid_3bars_1and_1pubs!1m4!1u5!2m2!5m1!1sgcid_3pizza_1restaurant!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e5!2m1!1e3!2m4!1e17!4m2!17m1!1e2!3sIAEqAkJS,lf:1,lf_ui:9')
     while tem_botao:
         print(f'Pegando comércios da página {ciclos}.')
         conteudo = google_maps.content()
